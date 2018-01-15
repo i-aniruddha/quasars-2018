@@ -1,0 +1,201 @@
+/* #region CSS formatters*/
+* {
+    font-family: 'Dosis', sans-serif;
+    text-transform: lowercase;
+}
+
+html,body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    font-size: 16px;
+
+    /* --primary-color: ; */
+    --secondary-color: #7b1fa2;
+    --secondary-text: #9c27b0;
+    --secondary-color-text: #fff;
+}
+main {
+    flex: 1 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+/* #endregion */
+
+/* #region Materialize customizations */
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+}
+nav.transparent-bg, nav.transparent-bg > .nav-wrapper  {
+    background: rgba(0,0,0,0);
+}
+nav ul {
+    background-color: white;
+}
+nav ul a {
+    color: rgba(0,0,0,0.87);
+}
+
+.btn,
+.card .card-action a {
+    text-transform: lowercase !important;
+}
+
+.btn {
+    border-radius: 5px;
+}
+
+.card {
+    border-radius: 5px;
+}
+
+.tabs .tab a, .tabs .tab a:hover {
+    color: var(--secondary-text);
+}
+.tabs .tab a.active {
+    color: var(--secondary-text);
+}
+.tabs .indicator {
+    background-color: var(--secondary-color);
+}
+
+.page-footer {
+    background-color: unset;
+    color: unset;
+}
+.page-footer .footer-copyright {
+    color: unset;
+}
+/* #endregion */
+
+/* #region Full screen menu for mobile*/
+.mobile-menu--fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: white;
+    z-index: 1000;
+}
+.mobile-menu--fullscreen> ul {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+.mobile-menu--fullscreen> ul> li {
+    padding: 1rem 0.7rem;
+    /* text-align: center; */
+}
+.mobile-menu--fullscreen> ul> li> a {
+    color: rgba(0,0,0,0.87);
+}
+.mobile-menu--fullscreen> .close {
+    padding: 1rem;
+}
+.social-links> a {
+    font-size: 1.5rem;
+    color: initial;
+}
+.social-links> a:not(:last-child) {
+    margin-right: 5px;
+}
+/* #endregion */
+
+/* #region CSS helper classes*/
+/* .primary {
+    background-color: var(--primary-color);
+}
+.primary-text {
+    color: var(--primary-color);
+}
+.secondary {
+    background-color: var(--secondary-color);
+}
+.secondary-text {
+    background-color: var(--secondary-color);
+} */
+
+section.hero {
+    min-height: 100vh;
+}
+
+.typography--underline {
+    text-decoration: underline;
+}
+.typography--relaxed {
+    letter-spacing: 0.03rem;
+    word-spacing: 0.2rem;
+}
+
+.typography--display4 {
+    font-size: 7rem;
+}
+.typography--display1 {
+    font-size: 3rem;
+}
+.typography--headline {
+    font-size: 2.25rem !important;
+}
+.typography--title {
+    font-size: 1.5rem !important;
+    font-weight: 500 !important;
+}
+.typography--subheading1 {
+    font-size: 2rem;
+}
+.typography--subheading2 {
+    font-size: 2rem !important;
+    font-weight: 500 !important;
+}
+
+
+/* Custom Rules */
+#scroll-down {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+section.container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* #endregion */
+
+/* #region Custom Animation */
+@keyframes bounce {
+    0% {
+        transform: translateY(-2px);
+    }
+    25% {
+        transform: translateY(-1.75px);
+    }
+    50% {
+        transform: translateY(2px);
+    }
+    75% {
+        transform: translateY(-1.75px);
+    }
+    100% {
+        transform: translateY(-2px);
+    }
+}
+
+.animation-bounce {
+    animation: bounce 1s infinite ease-out;
+}
+
+/* #endregion */
